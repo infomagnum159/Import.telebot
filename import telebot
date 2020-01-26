@@ -1,0 +1,8 @@
+import telebot
+
+bot = telebot.TeleBot("920493514:AAHDf1uB2XEzhDQuCDCk1fCW9DEyCQ6cNTU")
+
+@bot.message_handler(content_types=['text'])
+def send_echo(message):
+	bot.reply_to(message, message.text)
+bot.polling( none_stop = True )
